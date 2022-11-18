@@ -225,6 +225,7 @@ class LoginActivity : AppActivity(), UmengLogin.OnLoginListener,
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         // 友盟回调
@@ -252,6 +253,7 @@ class LoginActivity : AppActivity(), UmengLogin.OnLoginListener,
             Platform.WECHAT -> {
 
             }
+            else->{}
         }
 
         logoView?.let {

@@ -444,7 +444,7 @@ class DialogActivity : AppActivity() {
             R.id.btn_dialog_custom -> {
 
                 // 自定义对话框
-                BaseDialog.Builder<BaseDialog.Builder<*>>(this)
+                BaseDialog.Builder(this)
                     .setContentView(R.layout.custom_dialog)
                     .setAnimStyle(AnimAction.ANIM_SCALE) //.setText(id, "我是预设置的文本")
                     .setOnClickListener(R.id.btn_dialog_custom_ok, object : BaseDialog.OnClickListener<Button> {
@@ -532,6 +532,7 @@ class DialogActivity : AppActivity() {
             .showAsDropDown(view)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         // 友盟回调

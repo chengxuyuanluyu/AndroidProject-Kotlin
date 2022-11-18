@@ -42,6 +42,7 @@ class ArrowDrawable private constructor(private val builder: Builder) : Drawable
         paint.colorFilter = colorFilter
     }
 
+    @Deprecated("Deprecated in Java")
     override fun getOpacity(): Int {
         return PixelFormat.TRANSLUCENT
     }
